@@ -9,10 +9,12 @@ We can do math with operators like +, -, *, and /.
 We can find the remainder after dividing two numbers with a modulus: %.
 We can generate a random number with Math.random, then make it a whole number with Math.floor.
 We write a single line comment with // and a multi-line comment with /* and */.
+
 2. Variables
 How to create variables.
 How to change a variable's value.
 How to interpolate, or insert, a variable into a string.
+
 3. Control flow
 if/else statements make binary decisions and execute separate code based on a condition.
 We can add extra conditions with to if/else statements with else if conditions.
@@ -23,9 +25,15 @@ Logical Operators, like &&, ||, !==, and !, can compare two variables to see if 
 || checks if either side is true.
 !== checks if both sides are not equal.
 ! changes a variable that is true to false, and vice versa.
+
 4. Function
 Functions are written to perform a task.
 Functions take data or variables, perform a set of tasks on them, and then return the result.
 We can define parameters when calling the function.
 When calling a function, we can pass in arguments, which will set the function's parameters.
 We can use return to return the result of a function which allows us to call functions anywhere, even inside other functions.
+
+5. Scope
+Scope is the idea in programming that some variables are acessible/inaccessible from other parts of the program.
+Global Scope refers to variables that are accessible to every part of the program.
+Functional Scope refers to variables created inside functions, which are not accessible outside of its block.
