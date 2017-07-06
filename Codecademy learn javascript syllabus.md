@@ -37,3 +37,9 @@ We can use return to return the result of a function which allows us to call fun
 Scope is the idea in programming that some variables are acessible/inaccessible from other parts of the program.
 Global Scope refers to variables that are accessible to every part of the program.
 Functional Scope refers to variables created inside functions, which are not accessible outside of its block.
+
+6. Arrays
+Arrays are lists and are a way to store data in JavaScript. Each item inside of an array is at a numbered position. Arrays are created with brackets [].
+We can access one item in an array using it's numbered position, with syntax like: myArray[0].
+Arrays have a length property, which allows you to see how many items are in an array.
+Arrays also have their own methods, including push and pop, which add and subtract items from an array, respectively.
