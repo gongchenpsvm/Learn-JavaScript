@@ -43,3 +43,8 @@ Arrays are lists and are a way to store data in JavaScript. Each item inside of 
 We can access one item in an array using it's numbered position, with syntax like: myArray[0].
 Arrays have a length property, which allows you to see how many items are in an array.
 Arrays also have their own methods, including push and pop, which add and subtract items from an array, respectively.
+
+7. Loop
+for loops allow us to repeat a block of code a known amount of times.
+We can use a for loop inside another for loop to compare two lists.
+while loops are for looping over a code block an unknown amount of times.
