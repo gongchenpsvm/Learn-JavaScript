@@ -24,6 +24,7 @@
     .panels {
       min-height:100vh;
       overflow: hidden;
+      display: flex;
     }
 
     .panel {
@@ -41,6 +42,15 @@
       font-size: 20px;
       background-size:cover;
       background-position:center;
+      flex: 1;/*Tell each panel to evenly distribute the extra space*/
+
+      /*Make the content center, instead of upper, though document said only support vertically*/
+      justify-content: center;
+/*      align-items: center;*/
+
+      display: flex;/*.panel is a flex container as well a flex item*/
+/*      upper word and lower word are put above and below*/
+      flex-direction: column;
     }
 
 
@@ -50,10 +60,19 @@
     .panel4 { background-image:url(https://source.unsplash.com/ITjiVXcwVng/1500x1500); }
     .panel5 { background-image:url(https://source.unsplash.com/3MNzGlQM7qs/1500x1500); }
 
-    .panel > * {
+    .panel > * {/* Immediate children and all*/
       margin:0;
       width: 100%;
       transition:transform 0.5s;
+      /*border helps show*/
+      border: 1px solid red;
+      flex: 1 0 auto;
+      display: flex;
+      /*Put content at center of horizontal axis*/
+      justify-content: center;
+      /*Center at vertical axis*/
+      align-items: center;
+      /*Now at the very center*/
     }
 
     .panel p {
