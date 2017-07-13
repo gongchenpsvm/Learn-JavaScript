@@ -2,7 +2,11 @@ Tech:
 fetch() HTML API
 spead ... ES6 
 regular expression
-
+map an array and join the array
+innerthml
 Steps:
-1. Get Json file from github
-2. Filter the Json array to result array
+1. get Json file from github
+2. filter the Json array to result array
+3. select elements
+4. add event listeners to the elements
+5. create functions called to display content when events fire

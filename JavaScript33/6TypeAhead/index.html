@@ -29,7 +29,16 @@ const endpoint = 'https://gist.githubusercontent.com/Miserlou/c5cd8364bf9b2420bb
     }
     function displayMatches() {
         const matchArray = findMatches(this.value, cities);
-        console.log(matchArray);
+        const html = matchArray.map(place => {
+            //position of the dot below is critical
+            return `
+                <li>
+                    <span class="name">${place.city}, ${place.state}</span>
+                    <span class="population">${place.population}</span>
+                </li>
+            `;
+        }).join('');
+        suggestions.innerHTML = html;
     }
 
     const searchInput = document.querySelector('.search');
