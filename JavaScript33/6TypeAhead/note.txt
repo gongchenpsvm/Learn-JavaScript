@@ -1,0 +1,8 @@
+Tech:
+fetch() HTML API
+spead ... ES6 
+regular expression
+
+Steps:
+1. Get Json file from github
+2. Filter the Json array to result array
