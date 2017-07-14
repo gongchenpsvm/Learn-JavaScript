@@ -10,3 +10,4 @@ Steps:
 3. select elements
 4. add event listeners to the elements
 5. create functions called to display content when events fire
+6. replace normal words with highlighted matched searched word
