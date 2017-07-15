@@ -7,6 +7,36 @@
 <body>
 <canvas id="draw" width="800" height="800"></canvas>
 <script>
+    const canvas = document.querySelector('#draw');
+    /*A context to draw on can be 2d or 3d*/
+    const ctx = canvas.getContext('2d');
+    //set the context to be as large as the screen
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    //set color used for stroke
+    ctx.strokeStyle = '#BADA55';
+    //create rounded corner when 2 line meet
+    ctx.lineJoin = 'round';
+    //set current line width to
+    ctx.lineWidth = 100;
+
+    //is button pressed and the stroke drawing now
+    let isDrawing = false;
+    //coordinate of the stroke
+    let lastX = 0;
+    let lastY = 0;
+
+    function draw(e) {
+        if (!isDrawing) return;
+        console.log(e);
+    }
+    canvas.addEventListener('mousemove', draw);
+    //mouse clicked down, begin drawing
+    canvas.addEventListener('mousedown', () => isDrawing = true);
+    //mouse up, stop drawing
+    canvas.addEventListener('mouseup', () => isDrawing = false);
+    //mouse out of screen, stop
+    canvas.addEventListener('mouseout', () => isDrawing = false);
 </script>
 
 <style>
