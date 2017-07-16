@@ -20,17 +20,19 @@
     ctx.lineCap = 'round';
     //set current line width to
     ctx.lineWidth = 100;
-
+    //ctx.globalCompositeOperation = 'multiply';
     //is button pressed and the stroke drawing now
     let isDrawing = false;
     //coordinate of the stroke
     let lastX = 0;
     let lastY = 0;
     let hue = 0;
+    let direction = true;
     function draw(e) {
         if (!isDrawing) return;//stop the function when mouse up
         //A path begins, a path not necessarily created or drawn
         ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`;
+        //ctx.lineWidth = hue;
         ctx.beginPath();
         //A path starts from where the mouse clicked down
         ctx.moveTo(lastX, lastY);
@@ -40,6 +42,19 @@
         ctx.stroke();
         [lastX, lastY] = [e.offsetX, e.offsetY];
         hue++;
+        //Change linewidth when drawing
+        if (hue >= 360) {
+            hue = 0;
+        }
+        if (ctx.lineWidth >= 100 || ctx.lineWidth <= 1) {
+            direction = !direction;
+        }
+        if (direction) {
+            ctx.lineWidth++;
+        }
+        else {
+            ctx.lineWidth--;
+        }
     }
     canvas.addEventListener('mousemove', draw);
     //mouse clicked down, begin drawing
