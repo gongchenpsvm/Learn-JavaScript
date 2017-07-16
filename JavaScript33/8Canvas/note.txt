@@ -3,3 +3,5 @@ canvas
 
 Steps:
 1.Grab canvas
+2.Set properties of stroke and canvas
+3.Create functions and variables to make canvas responding to drawing event
