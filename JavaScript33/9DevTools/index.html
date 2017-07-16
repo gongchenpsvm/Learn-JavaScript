@@ -7,7 +7,7 @@
 <body>
 
   <p onClick="makeGreen()">×BREAK×DOWN×</p>
-
+  <p> test</p>
   <script>
     const dogs = [{ name: 'Snickers', age: 2 }, { name: 'hugo', age: 8 }];
 
@@ -18,29 +18,47 @@
     }
 
     // Regular
-
+    console.log('hello');
     // Interpolated
-
+    console.log('Hello I am a %s string', 'good');
     // Styled
-
+    console.log('%c I am some stylish text', 'font-size:50px; background: red');
     // warning!
-
+    console.warn('oh NOOOOO');
     // Error :|
-
+    console.error('shiiii');
     // Info
-
+    console.info('infoinfo');
     // Testing
-
+    const p = document.querySelectorAll('p');
+    //console.assert(p.classList.contains('ouch'), 'That is wrong!');
     // clearing
-
+    console.clear();//Will print a message saying the console is cleared
     // Viewing DOM Elements
-
+    console.log(p);//if p is a nodelist of elements, then log(p) gives a dropdown
+    //even p is a single element, dir() can give a dropdown showing properties
+    console.dir(p);
     // Grouping together
-
+    dogs.forEach(dog => {
+        console.groupCollapsed(`${dog.name}`);
+        console.log(`This is ${dog.name}`);
+        console.log(`${dog.name} is ${dog.age} years old`);
+        console.log(`${dog.name} is ${dog.age * 7} dog years old`);
+        console.groupEnd();
+    });
     // counting
-
+    console.count('Wes');
+    console.count('Wes');
+    console.count('Gong');
+    console.count('Wes');
     // timing
-
+    console.time('fetch data');
+    fetch('https://api.github.com/users/gongchenpsvm')
+      .then(data => data.json())
+      .then(data => {
+        console.timeEnd(`fetching data`);
+        console.log(data);
+    });
   </script>
 </body>
 </html>
