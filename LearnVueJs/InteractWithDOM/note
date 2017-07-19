@@ -1,0 +1,8 @@
+How Vue.js made websites are rendered:
+html -> template -> html
+template has access to all data and methods in the vue instance without any prefix needed
+but functions in methods: do need prefix this to access data
+v-bind enable binding dynamic data to html
+All usage of data get re-rendered once the data changed. To stop, use v-once in template
+Vue's template only output string, not html.
+Use v-html to output raw html, as long as raw html output is safe.
