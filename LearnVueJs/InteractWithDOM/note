@@ -1,8 +1,29 @@
 How Vue.js made websites are rendered:
 html -> template -> html
+
 template has access to all data and methods in the vue instance without any prefix needed
+
 but functions in methods: do need prefix this to access data
-v-bind enable binding dynamic data to html
+
+v-bind enable binding dynamic data to html element's attribute
+
 All usage of data get re-rendered once the data changed. To stop, use v-once in template
-Vue's template only output string, not html.
+Vue's template only output string, not html. (14)
+
 Use v-html to output raw html, as long as raw html output is safe.
+
+Use v-on:event to listent to event on certain element
+
+Event object is automatically passed to function called by event listener e.g. mousemove
+
+We can pass our own event object e.g. 2 to event listener function
+
+Event modifier can handle event without affecting event details e.g. call function at JS
+
+Key event modifier e.g. v-on:keyup.enter.space="alertMe"
+
+v-model achieves 2-way binding
+
+Functions in methods section called every time data in Vue instance changed, while functions in computed section rerun only when the data involved changed
+
+While the section computed starts with function involving the data watched, the section watching starts with data watched
