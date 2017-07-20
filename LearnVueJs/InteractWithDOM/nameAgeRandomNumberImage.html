@@ -1,0 +1,34 @@
+<script src = https://unpkg.com/vue></script>
+
+<div id = "exercise">
+    <p>Name and age: {{ name }} {{age}}</p>
+    <p>Age * 3: {{age*3}}</p>
+    <p>Random number between 0 and 1: {{random()}}</p>
+    <div>
+        <p>Vue.js pic</p>
+        <img v-bind:src = "image" style="width: 200px">
+    </div>
+    <div>
+        <p>input name</p>
+        <input type="text" v-bind:value="name">
+    </div>
+
+
+</div>
+
+<script>
+    new Vue({
+        el: '#exercise',
+        data: {
+            name: 'Gong',
+            age: 22,
+            image: 'http://timrijkse.nl/images/vue-full-guide.png'
+        },
+        methods: {
+            random: function (){
+                return Math.random();
+            }
+        }
+
+    });
+</script>
