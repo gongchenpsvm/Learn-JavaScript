@@ -92,7 +92,7 @@
                 backgroundColor: 'gray'
             },
             progressBar: {
-                width: '1000px',
+                width: '100px',
                 backgroundColor: 'black'
             }
 
@@ -107,8 +107,10 @@
         },
         startProgress: function() {
             var vm = this;
+            var width = 0;
             setInterval(function() {
-
+                width += 10;
+                vm.progressBar.width = width + 'px';
             },500);
         }
   }
