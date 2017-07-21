@@ -28,6 +28,11 @@
     .text-color {
         color: yellow;
     }
+
+    .visible {
+        width: 100px;
+        height: 50px;
+    }
 </style>
 
 <div id="exercise">
@@ -40,8 +45,8 @@
   <div v-bind:class="[floatClassObject, 'blue', 'text-color']">I got no class :(</div>
   <!-- 3) Let the user enter a class (create some example classes) and attach it -->
   <div>
-    <input type="text">
-    <div></div>
+    <input type="text" v-model="userClass">
+    <div v-bind:class="userClass"></div>
   </div>
   <!-- 4) Let the user enter a class and enter true/ false for another class (create some example classes) and attach the classes -->
   <div>
@@ -69,7 +74,8 @@
                 highlight: false,
                 shrink: true
             },
-            floatClassObject: 'float'
+            floatClassObject: 'float',
+            userClass: ''
 
     },
     methods: {
