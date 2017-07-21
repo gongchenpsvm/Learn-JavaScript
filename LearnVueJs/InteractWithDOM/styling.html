@@ -33,6 +33,12 @@
         width: 100px;
         height: 50px;
     }
+
+    .progress-bar {
+        width: 200px;
+        height: 20px;
+        border: 1px solid black;
+    }
 </style>
 
 <div id="exercise">
@@ -63,8 +69,9 @@
   </div>
   <!-- 6) Create a simple progress bar with setInterval and style bindings. Start it by hitting the below button. -->
   <div>
+    <p>Exercise 6 below</p>
     <button v-on:click="startProgress">Start Progress</button>
-    <div></div>
+    <div v-bind:class="'progress-bar'"></div>
   </div>
 </div>
 
