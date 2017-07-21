@@ -71,7 +71,7 @@
   <div>
     <p>Exercise 6 below</p>
     <button v-on:click="startProgress">Start Progress</button>
-    <div v-bind:class="'progress-bar'"></div>
+    <div v-bind:class="'progress-bar'" v-bind:style="progressBar"></div>
   </div>
 </div>
 
@@ -90,7 +90,12 @@
                 width: '100px',
                 height: '150px',
                 backgroundColor: 'gray'
+            },
+            progressBar: {
+                width: '1000px',
+                backgroundColor: 'black'
             }
+
     },
     methods: {
         startEffect: function() {
@@ -99,7 +104,13 @@
                 vm.effectClasses.highlight = !vm.effectClasses.highlight;
                 vm.effectClasses.shrink = !vm.effectClasses.shrink;
             },1000);
-    }
+        },
+        startProgress: function() {
+            var vm = this;
+            setInterval(function() {
+
+            },500);
+        }
   }
 });
 </script>
