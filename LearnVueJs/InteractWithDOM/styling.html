@@ -58,7 +58,7 @@
   <!-- 5) Repeat 3) but now with values for styles (instead of class names). Attach the respective styles.  -->
   <div>
     <p>Exercise 5 below</p>
-    <input type="text">
+    <input type="text" v-model="myStyle.backgroundColor">
     <div v-bind:style="myStyle"></div>
   </div>
   <!-- 6) Create a simple progress bar with setInterval and style bindings. Start it by hitting the below button. -->
@@ -82,7 +82,7 @@
             myStyle: {
                 width: '100px',
                 height: '150px',
-                'background-color': 'gray'
+                backgroundColor: 'gray'
             }
     },
     methods: {
