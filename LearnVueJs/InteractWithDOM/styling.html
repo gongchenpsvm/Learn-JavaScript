@@ -46,7 +46,7 @@
   <!-- 3) Let the user enter a class (create some example classes) and attach it -->
   <div>
     <input type="text" v-model="userClass">
-    <div v-bind:class="userClass"></div>
+    <div v-bind:class="[{visible: true}, userClass]"></div>
   </div>
   <!-- 4) Let the user enter a class and enter true/ false for another class (create some example classes) and attach the classes -->
   <div>
