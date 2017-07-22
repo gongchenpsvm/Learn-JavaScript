@@ -1,0 +1,7 @@
+v-if, v-else remove elements, while v-show hides
+
+output list with v-for 
+
+Combine v-for and template to loop through and output unnested elements. e.g. index is in <h> value in <p>
+
+v-for can also loop through value-key-index pairs inside an object
