@@ -16,6 +16,7 @@ new Vue({
             var damageToPlayer = Math.ceil(5 + Math.random()*(15-5));
             this.playerHealth-=damageToPlayer;
             this.monsterHealth-=damageToMonster;
+            this.checkWin();
         },
         specialAttack: function() {
 
@@ -25,6 +26,21 @@ new Vue({
         },
         giveUp: function() {
 
+        },
+        checkWin: function() {
+            if (this.monsterHealth < 0) {
+                if (confirm('You win! New game?')) {
+                    this.startGame();
+                } else {
+                    this.gameIsRunning = false;
+                }
+            } else if (this.playerHealth < 0) {
+                if (confirm('You lose! New game?')) {
+                    this.startGame();
+                } else {
+                    this.gameIsRunning = false;
+                }
+            }
         }
     }
 });
