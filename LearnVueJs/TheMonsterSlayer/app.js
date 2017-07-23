@@ -12,7 +12,10 @@ new Vue({
             this.monsterHealth = 100;
         },
         attack: function() {
-
+            var damageToMonster = Math.ceil(3 + Math.random()*(10-3));
+            var damageToPlayer = Math.ceil(5 + Math.random()*(15-5));
+            this.playerHealth-=damageToPlayer;
+            this.monsterHealth-=damageToMonster;
         },
         specialAttack: function() {
 
