@@ -19,7 +19,11 @@ new Vue({
             this.checkWin();
         },
         specialAttack: function() {
-
+            var damageToMonster = Math.ceil(9 + Math.random()*(20-9));
+            var damageToPlayer = Math.ceil(5 + Math.random()*(15-5));
+            this.playerHealth-=damageToPlayer;
+            this.monsterHealth-=damageToMonster;
+            this.checkWin();
         },
         heal: function() {
 
