@@ -3,7 +3,8 @@ new Vue({
     data: {
         playerHealth: 100,
         monsterHealth: 100,
-        gameIsRunning: false //Initially the game stops
+        gameIsRunning: false, //Initially the game stops
+        turns: []
     },
     methods: {
         startGame: function() {
@@ -17,6 +18,13 @@ new Vue({
             this.playerHealth-=damageToPlayer;
             this.monsterHealth-=damageToMonster;
             this.checkWin();
+            this.turns.unshift({
+                isPlayer: true,
+                text: 'Player hits Monster for ' + damageToMonster
+            }, {
+                isPlayer: false,
+                text: 'Monster hits player for ' + damageToPlayer
+            })
         },
         specialAttack: function() {
             var damageToMonster = Math.ceil(9 + Math.random()*(20-9));
