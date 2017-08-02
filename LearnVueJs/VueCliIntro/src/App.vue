@@ -2,6 +2,7 @@
   <div id="app">
       <app-user>
     </app-user>
+    <p>Test scoped style of User.vue</p>
   </div>
 </template>
 
